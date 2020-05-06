@@ -40,11 +40,15 @@ let questionbar = document.querySelector(".question-bar");
 let gameEnd = false;
 
 function updateScreen(){
-    var answered = document.querySelector(".answered span");
-    answered.innerText = index+"/"+questions.length;
+    var answered = document.querySelector(".answered .first");
+    answered.innerText = index;
+    answered = document.querySelector(".answered .last");
+    answered.innerText = questions.length;
 
-    var score = document.querySelector(".score span");
-    score.innerText = correct + "/" +index;
+    var score = document.querySelector(".score .first");
+    score.innerText = correct;
+    score = document.querySelector(".score .last");
+    score.innerText = index;
     
     if(index < questions.length){
         var count = document.querySelector(".question-bar span");

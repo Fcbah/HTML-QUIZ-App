@@ -113,3 +113,59 @@ button[disabled]{
     background-color: red;
     color: white;
 }
+
+/* SCORE BOARD */
+.score-board{
+    display:flex;
+    flex-direction: column;
+}
+.score-board > h2, .question-bar > h2{
+    margin: 0;
+}
+
+.answered, .score{
+    border-radius: .5rem .5rem 0 0;
+    box-shadow: #5f4b44;
+}
+
+.answered *, .score *{
+    margin-top: 0;
+}
+
+.score-board label{
+    background-color: #0099cc;
+    color: #fff;
+    display:block;
+    padding: .5em;
+    border-radius: .5rem .5rem 0 0;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.value{
+    display:flex;
+}
+
+.value *{
+    flex:1;
+    padding: .5em;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.first{
+    background-color: green;
+    color:white;
+}
+.value .middle{
+    flex:0 0 auto;
+    background-color: #0099cc;
+    color:white;
+}
+.last{
+    background-color: orange;
+    color:white;
+}
+
