@@ -49,7 +49,7 @@ body * + *{
     color:white;
     font-weight: bolder;
     padding: 0.5em 1em;
-    border-right: solid 3px blue;
+    border-right: solid 3px #0099cc;
 }
 .flex{
     display: flex;
@@ -167,5 +167,20 @@ button[disabled]{
 .last{
     background-color: orange;
     color:white;
+}
+
+@media(max-width : 600px ){
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .question-bar{
+        margin: 1.5em 0;
+    }
+
+    .score-board{
+        flex: 1;
+    }
 }
 

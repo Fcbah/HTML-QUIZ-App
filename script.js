@@ -38,17 +38,12 @@ let selectedOption = "";
 let button = document.querySelector(".question-bar button");
 let questionbar = document.querySelector(".question-bar");
 let gameEnd = false;
+let selectedCorrect ="";
+let selectedWrong = "";
+updateScreen();
 
 function updateScreen(){
-    var answered = document.querySelector(".answered .first");
-    answered.innerText = index;
-    answered = document.querySelector(".answered .last");
-    answered.innerText = questions.length;
-
-    var score = document.querySelector(".score .first");
-    score.innerText = correct;
-    score = document.querySelector(".score .last");
-    score.innerText = index;
+    updateScoreBoard();
     
     if(index < questions.length){
         var count = document.querySelector(".question-bar span");
@@ -84,16 +79,24 @@ function updateScreen(){
     }
 }
 
-updateScreen();
-
 function onNextQuestion(){
     //index has been updated in the update Screen
     //correct has been updated in the option Clicked
     removeclasses();
     updateScreen();
 }
-let selectedCorrect ="";
-let selectedWrong = "";
+
+function updateScoreBoard(){
+    var answered = document.querySelector(".answered .first");
+    answered.innerText = index;
+    answered = document.querySelector(".answered .last");
+    answered.innerText = questions.length;
+
+    var score = document.querySelector(".score .first");
+    score.innerText = correct;
+    score = document.querySelector(".score .last");
+    score.innerText = index;
+}
 
 
 function optionClicked(option){
@@ -111,7 +114,8 @@ function optionClicked(option){
             selectedWrong.classList.add("selected-wrong");
             selectedCorrect = document.querySelector("."+questions[index-1].answer);
             selectedCorrect.classList.add("selected-correct")
-        }     
+        }
+        updateScoreBoard();     
     }
         
 }
