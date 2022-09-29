@@ -1,4 +1,4 @@
-# HTML QUIZ APP
+# HTML QUIZ GAME
 
 This is a design of a Quiz app designed purely using HTML, CSS and Javascript.
 
